@@ -1,0 +1,6 @@
+{
+  "framework": null,
+  "installCommand": "echo skip",
+  "buildCommand": "mkdir -p public && cp site/index.html public/index.html",
+  "outputDirectory": "public"
+}

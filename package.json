@@ -8,7 +8,26 @@
     "dev": "electron-vite dev",
     "build": "electron-vite build",
     "start": "electron-vite preview",
-    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json"
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "dist:mac": "electron-vite build && electron-builder --mac zip"
+  },
+  "build": {
+    "appId": "com.studiotra.livetranslate",
+    "productName": "Live Translate",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "identity": null,
+      "target": [
+        "zip"
+      ]
+    },
+    "artifactName": "Live-Translate-Mac-${arch}.${ext}"
   },
   "dependencies": {
     "openai": "^7.23.0",
@@ -22,6 +41,7 @@
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.3",
     "electron": "^38.1.2",
+    "electron-builder": "^26.18.0",
     "electron-vite": "^4.0.1",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
