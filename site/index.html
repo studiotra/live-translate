@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Live Translate</title>
+    <meta
+      name="description"
+      content="Download Live Translate for Mac. Add your own Deepgram and OpenAI keys. Captions appear in Korean, English, and Japanese."
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #121417;
+        --ink: #f4f1ea;
+        --muted: #a39e94;
+        --line: rgba(255, 255, 255, 0.14);
+        --accent: #ff5a36;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: var(--bg); color: var(--ink); }
+      body {
+        font-family: "Avenir Next", "Segoe UI", "Apple SD Gothic Neo", sans-serif;
+        min-height: 100vh;
+      }
+      main {
+        width: min(720px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 72px 0 96px;
+      }
+      p.kicker {
+        margin: 0;
+        font-size: 11px;
+        font-weight: 650;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      h1 {
+        margin: 14px 0 0;
+        font-size: clamp(40px, 7vw, 64px);
+        font-weight: 500;
+        letter-spacing: -0.04em;
+        line-height: 0.95;
+      }
+      .lead {
+        max-width: 38rem;
+        margin: 22px 0 0;
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+      .download {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 32px;
+        height: 48px;
+        padding: 0 22px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--ink);
+        color: var(--bg);
+        font: inherit;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .download[disabled] { opacity: 0.55; }
+      .file-note {
+        margin: 12px 0 0;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      ol {
+        list-style: none;
+        margin: 56px 0 0;
+        padding: 0;
+        border-top: 1px solid var(--line);
+      }
+      li {
+        display: grid;
+        grid-template-columns: 2.5rem 1fr;
+        gap: 8px;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      li span {
+        color: var(--accent);
+        font-variant-numeric: tabular-nums;
+      }
+      li h2 { margin: 0; font-size: 18px; font-weight: 550; }
+      li p { margin: 6px 0 0; color: var(--muted); line-height: 1.5; }
+      a { color: var(--ink); }
+      .privacy {
+        margin: 28px 0 0;
+        max-width: 38rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="kicker">Live Translate</p>
+      <h1>Meeting captions in three languages.</h1>
+      <p class="lead">
+        Korean, English, and Japanese are recognized as people speak. Each language gets its own screen, and each screen can read the translation aloud.
+      </p>
+      <button class="download" type="button" disabled>Download for Mac</button>
+      <p class="file-note">The Mac install file will be attached to this button with the first public build.</p>
+
+      <ol>
+        <li>
+          <span>01</span>
+          <div>
+            <h2>Download the app</h2>
+            <p>Install it on the Mac you use in the meeting. The first time, right-click the app and choose Open.</p>
+          </div>
+        </li>
+        <li>
+          <span>02</span>
+          <div>
+            <h2>Create your own API keys</h2>
+            <p>
+              Make a key at
+              <a href="https://console.deepgram.com/">Deepgram</a>
+              for speech, and an API key at
+              <a href="https://platform.openai.com/api-keys">OpenAI</a>
+              for translation. A ChatGPT subscription is separate from API credit. Set a spending limit on each account.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span>03</span>
+          <div>
+            <h2>Paste the keys into the app</h2>
+            <p>Open Live Translate, paste both keys under API keys, and press Save keys. They stay on that Mac.</p>
+          </div>
+        </li>
+      </ol>
+
+      <p class="privacy">
+        Audio from the meeting is sent to Deepgram. The text is sent to OpenAI for translation and, when you stop, for a summary. This page does not collect keys or accounts.
+      </p>
+    </main>
+  </body>
+</html>
